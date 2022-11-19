@@ -1,0 +1,2 @@
+com\microservices\demo\twitter\to\kafka\services\TwitterToKafkaServiceApplication.class
+com\microservices\demo\twitter\to\kafka\services\config\TwitterToKafkaServiceConfigData.class
