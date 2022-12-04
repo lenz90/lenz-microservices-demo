@@ -10,6 +10,7 @@
 		<module>kafka/kafka-model</module>
 		<module>kafka/kafka-admin</module>
 		<module>kafka/kafka-producer</module>
+		<module>common-config</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,18 +24,25 @@
 	<name>lenz-microservices-demo</name>
 	<description>Microservice demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 		<spring-boot.version>2.7.5</spring-boot.version>
 		<maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 		<org.twitter4j.version>4.0.7</org.twitter4j.version>
 		<org.projectlombok.version>1.18.24</org.projectlombok.version>
 		<avro.version>1.11.1</avro.version>
+		<spring-kafka.version>2.9.0</spring-kafka.version>
+		<spring-retry.version>2.0.0</spring-retry.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.lenz.microservices.demo</groupId>
 				<artifactId>app-config-data</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lenz.microservices.demo</groupId>
+				<artifactId>common-config</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -70,6 +78,16 @@
 				<groupId>org.apache.avro</groupId>
 				<artifactId>avro</artifactId>
 				<version>${avro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.kafka</groupId>
+				<artifactId>spring-kafka</artifactId>
+				<version>${spring-kafka.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.retry</groupId>
+				<artifactId>spring-retry</artifactId>
+				<version>${spring-retry.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
