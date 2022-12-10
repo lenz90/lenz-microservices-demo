@@ -39,7 +39,7 @@ public class KafkaAdminClient {
         this.webClient = webClient;
     }
 
-    public void createTopic() {
+    public void createTopics() {
         CreateTopicsResult createTopicsResult;
         try {
             createTopicsResult = retryTemplate.execute(this::doCreateTopics);
