@@ -130,22 +130,6 @@
 						<groupId>io.swagger</groupId>
 						<artifactId>swagger-core</artifactId>
 					</exclusion>
-					<exclusion>
-						<groupId>org.apache.avro</groupId>
-						<artifactId>avro</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>io.confluent</groupId>
-						<artifactId>common-utils</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>io.confluent</groupId>
-						<artifactId>kafka-schema-registry-client</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>com.google.code.findbugs</groupId>
-						<artifactId>jsr305</artifactId>
-					</exclusion>
 				</exclusions>
 			</dependency>
 			<dependency>
@@ -169,7 +153,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<release>17</release>
+					<release>18</release>
 				</configuration>
 			</plugin>
 		</plugins>
