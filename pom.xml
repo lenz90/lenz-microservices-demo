@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.5</version>
+		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lenz.microservices.demo</groupId>
@@ -33,7 +33,10 @@
 		<spring-kafka.version>2.9.0</spring-kafka.version>
 		<spring-retry.version>2.0.0</spring-retry.version>
 		<kafka-avro-serializer.version>7.3.0</kafka-avro-serializer.version>
+		<maven.compiler.source>18</maven.compiler.source>
+		<maven.compiler.target>18</maven.compiler.target>
 	</properties>
+
 
 	<repositories>
 		<repository>
@@ -108,7 +111,11 @@
 				<artifactId>avro</artifactId>
 				<version>${avro.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-bindings</artifactId>
+				<version>1.10.0</version>
+			</dependency>
 			<dependency>
 				<groupId>io.confluent</groupId>
 				<artifactId>kafka-avro-serializer</artifactId>
@@ -153,7 +160,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<release>18</release>
+					<release>${java.version}</release>
 				</configuration>
 			</plugin>
 		</plugins>
